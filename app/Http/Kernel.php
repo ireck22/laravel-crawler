@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http;
-
+use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-
+use Config;
+use Mail;
+use Log;
 class Kernel extends HttpKernel
 {
     /**
@@ -77,4 +79,34 @@ class Kernel extends HttpKernel
         \Illuminate\Routing\Middleware\SubstituteBindings::class,
         \Illuminate\Auth\Middleware\Authorize::class,
     ];
+
+    protected $commands = [
+        Commands\Update1::class,
+        Commands\Update2::class,
+    ];
+    protected function schedule(Schedule $schedule)
+    {
+
+        $schedule->command('update:num1')->everyMinute();
+        
+        //     // ->weekly() // 每週執行
+        //     // ->wednesdays() // 每個星期一執行
+        //     // ->at(Config::get('update.time')) // 維護的時間在config中
+        //     // ->at('23:47')
+        //     ->after(function () {
+        //         Log::info('維護開始');
+        //         Mail::raw('維護開始', function($message) { 
+        //             $message->to('dragon9029@gmail.com');
+        //             $message->subject('維護開始');
+        //         });
+        // });
+
+        // $schedule->command('down');
+        // $schedule->command('update:num1')->evenInMaintenanceMode(); 
+        // $schedule->command('up')->evenInMaintenanceMode();
+        // 任務2
+        // $schedule
+        //     ->command...
+        //     ->...
+    }
 }
