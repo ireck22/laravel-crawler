@@ -104,9 +104,6 @@ class Kernel extends HttpKernel
         // $schedule->command('down');
         // $schedule->command('update:num1')->evenInMaintenanceMode(); 
         // $schedule->command('up')->evenInMaintenanceMode();
-        // 任務2
-        // $schedule
-        //     ->command...
-        //     ->...
+        
     }
 }
