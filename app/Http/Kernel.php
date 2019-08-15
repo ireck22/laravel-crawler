@@ -87,7 +87,8 @@ class Kernel extends HttpKernel
     protected function schedule(Schedule $schedule)
     {
 
-        $schedule->command('update:num1')->everyMinute();
+        // $schedule->command('update:num1')->everyMinute();
+        // $schedule->command('update:num1')->daily();
         
         //     // ->weekly() // 每週執行
         //     // ->wednesdays() // 每個星期一執行
