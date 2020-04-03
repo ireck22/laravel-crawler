@@ -12,8 +12,11 @@ class Kernel extends ConsoleKernel
      *
      * @var array
      */
+    protected $name = 'update:num1';
+     
     protected $commands = [
         //
+        'App\Console\Commands\Update1',
     ];
 
     /**
