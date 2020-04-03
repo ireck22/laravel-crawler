@@ -53,7 +53,7 @@ class Update1 extends Command
                 
             }
             // echo "<br>";
-            foreach ($result2 as  $r2) {
+            foreach ($result2 as $r2) {
                 if($datee==$r2){
                     $r3=$r2;
                     break;
